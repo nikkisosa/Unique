@@ -59,16 +59,36 @@ $connect->close();
 <br/>
 <div class="row">
   <div class="col-lg-3 pull-right">
-    <input type="text" class="form-control" placeholder="Amount Bill(ex. 200,500,600..)">
+    <input type="text" class="form-control" name="bill" id="bill" placeholder="Amount Bill(ex. 200,500,600..)">
     <br/>
-    <button class="btn btn-primary" type="button">SUBMIT</button>
-  </div>
+
+    <input class="btn btn-primary" type="button" name="submit" id="btn" data-toggle="modal" data-target=".bs-example-modal-sm" value="Submit">
+ </div>
 </div>
 
-
 </div>
 </div>
 
-
+<!-- MY SCRIPT-->
+<script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+    
+      $("#btn").click(function(){
+           var bill =  $('#bill').val();
+           //var calculate =  $('$calculate').val();
+          $.ajax({
+            type: "POST",
+            url : "success_payment.php",
+            data: {Bill:bill ,
+            	  Total: <?php echo $calculate; ?>},
+            success:function(data){
+              $('#bill').val('');
+              
+            }
+          });
+      });
+  });
+</script>
 </body>
 </html>
