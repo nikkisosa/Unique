@@ -1,0 +1,36 @@
+Account No: 102043971786
+Secret : H8tO1uT5iJ1tX4bF7kN8eE7mY6jI3dG3lO7oO2mO8pU3wW8qK5
+
+
+https://onlinebankingportal.mybluemix.net/login
+-----------------------------------------------
+Email: kendrick_crucillo@questronix.com.ph
+Pass : password1
+Account NO: 000000020000
+
+Email: pmelemos@unionbankph.com
+Pass : password1
+Account NO: 000000020001
+
+
+
+start = Month (kwp) 
+End = Month (kpw)
+
+equal = start - end
+
+
+
+
+First dapat alam mo kung anong date nagsisimula at nagtatapos yung metering ng meralco. Makikita mo naman ito sa bill kung kelan ang duration ng billing period.
+
+Halimbawa ang duration is from March 15 to April 15, sa March 15 nagsimula yung submeter nya ng 100 KWH then nung April 15 pumatak yung metro nya ng 500KWH. Then ide-duct mo yung 500KWH sa 100KW, ang result is 400KWH ang konsumo nya sa isang buwan.
+
+Pag nakuha mo na ito, hintayin mo yung bill. Halimbawa ang total bill mo ay 12,000 at ang total konsumo nyo for the billing period na nakalagay doon ay 857KWH. I-divide mo ang Php12000 sa 857KWH. Ang result ay Php14/Kilowatt hour ang presyo ng meralco. I-multiply mo ito ngayon sa konsumo nya na 400KWH (Php14 x 400KWH). Ang total bill nya for the billing period of April 15 - March 15 is Php5,600.
+
+Ngayon for the next month ang start ng monitoring mo ay from the 500KWH hanggang kung saan aabot ang konsumo nya sa May 15.
+
+Para maka-siguro tignan ang billing period na naka-indicate sa bill mo para sure ball ang monitoring date mo. Medyo matrabahao nga lang ngunit kailangan gawin upang maging patas ang bayaran ng bill.
+
+
+
