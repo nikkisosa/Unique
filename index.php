@@ -14,21 +14,34 @@
 			
 				<div class="row">
 					<div class="col-sm-5 form-group">
-						<div class="input-group">
+						<!--<div class="input-group">
 							<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-calendar"></i></span>
 								<input type="text" placeholder="Reading start" id="defaultPopup" class="form-control" name="end" id="end" aria-describedby="basic-addon1" >
-						</div>
+						</div>-->
 					</div>  
+				</div>
+		</div>
+		<div class="col-sm-4 form-group">
+			
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<!--<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-calendar"></i></span>
+								<input type="text" placeholder="Reading start" id="defaultPopup" class="form-control" name="end" id="end" aria-describedby="basic-addon1" >
+
+
+						</div>-->
+					</d<!--iv>  
 				</div>
 		</div>
 		<div class="col-sm-4 form-group">
 					<div class="row">
 						<div class="col-sm-5 form-group">
-							<div class="input-group">
+							<!--<div class="input-group">
 								<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-calendar"></i></span>
 									<input type="text" placeholder="Reading End" id="defaultPopup" class="form-control" name="end" id="end" aria-describedby="basic-addon1" >
 							</div>
-						</div>  
+						</div>  -->
 					</div>
 			</div>
 </form>
