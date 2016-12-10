@@ -1,3 +1,4 @@
+<?php include ('db/db.php'); ?>
 <!Doctype HTML>
 <html lang = "en">
 <head>
@@ -32,11 +33,18 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#Payments"><span class="glyphicon glyphicon-rub"></span>&nbsp Payment</a></li>
-        <li><a href="#Calculate"><span class="glyphicon glyphicon-list-alt"></span>&nbsp Calculate</a></li>
         <li class="dropdown">
         <li><a href="#Accounts" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>&nbsp Accounts <span class="caret"></span></a>
         
           <ul class="dropdown-menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php 
+
+            $query = mysqli_query($connect,"select Concat(Surname,',',Fname,' ',Mi) from accounts where surname = 'admin' and Fname = 'admin'");
+            if($row = mysqli_fetch_array($query))
+            {
+              echo $row[0];
+            }
+            ?> </a></li>
             <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span> Change Password</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> History Of Payment</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
