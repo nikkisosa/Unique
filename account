@@ -1,4 +1,4 @@
-Account No: 102043971786
+Account No: 101520219734
 Secret : H8tO1uT5iJ1tX4bF7kN8eE7mY6jI3dG3lO7oO2mO8pU3wW8qK5
 
 
@@ -13,13 +13,22 @@ Pass : password1
 Account NO: 000000020001
 
 
-
+kpw = PhP0.0781 
 start = Month (kwp) 
 End = Month (kpw)
 
 equal = start - end
 
-
+Bill Amount (Php)	Price per KWh (Php)
+P0 to P108			P0.33
+P109 to P338		P5.18
+P339 to P573		P6.64
+P574 to P1,021		P8.08
+P1,022 to P2,109	P10.12
+P2,110 to P3,271	P10.50
+P3,272 to P4,625	P10.87
+P4,626 to P7,684	P11.54
+P7,685 and up		P11.80
 
 
 First dapat alam mo kung anong date nagsisimula at nagtatapos yung metering ng meralco. Makikita mo naman ito sa bill kung kelan ang duration ng billing period.
