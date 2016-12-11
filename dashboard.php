@@ -75,7 +75,7 @@ $connect->close();
     <input type="text" class="form-control" name="bill" id="bill" placeholder="Amount Bill(ex. 200,500,600..)">
     <br/>
 
-    <input class="btn btn-primary" type="button" name="submit" id="btn" data-toggle="modal" data-target=".bs-example-modal-sm" value="Submit">
+    <input class="btn btn-primary" type="button" name="submit" id="btn" data-toggle="modal" data-target=".bs-example-modal-sm" value="Submit" style="background-color: #000080;">
  </div>
 </div>
 

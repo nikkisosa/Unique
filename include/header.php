@@ -24,7 +24,7 @@ if(isset($_SESSION['Username']))
 <title>CURE</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link href="../css/font-awesome.min.css" rel="stylesheet">
- <link rel="shortcut icon"  href="../icons/pageicon.ico">
+ <link rel="shortcut icon"  href="icons/pageicon.png">
 	<script src="../js/jquery-1.11.2.min.js"></script>
 	<script src="../js/bootstrap.js" type="text/javascript"></script>
   <link href="../css/sidebar.css" rel="stylesheet">
@@ -43,7 +43,7 @@ if(isset($_SESSION['Username']))
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">CURE</a>
+      <a class="navbar-brand" href="#"><img src="icons/cureicon.png" width="150px" height="40px" style="margin-top: -10px;" /></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

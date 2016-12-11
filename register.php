@@ -1,12 +1,18 @@
 <?php
+	include ('include/header.php');
 	include('db/db.php');
     if(isset($_POST['submit']))
     {
-        $SQL1 = "INSERT INTO otherinfo (OID, AID, Acc_no, Currency, Bal_acc, Address, Contact, Email, Gender, Pin) VALUES ('', '', '', 'PHP', '', '$_POST[Address]', '$_POST[contact]', '$_POST[emailadd]', '$_POST[Gender]', '$_POST[Pin]' )";
-        $SQL2 = "INSERT INTO accounts (AID, LID, Surname, Fname, Mi) VALUES ('','', '$_POST[surname]', '$_POST[firstname]', '$_POST[midname]')";
-        $SQL3 = "INSERT INTO Login_tbl (LID, Un, Pw) VALUES ('', $_POST[user]', $_POST[pass])";
+        $SQL3 = "INSERT INTO otherinfo (AID, Acc_no, Currency, Address, Contact, Email, Gender, Pin) VALUES ((select AID from accounts inner join Login_tbl on accounts.LID = Login_tbl.LID where Login_tbl.us = '$_POST["user"]'), '$_POST["Bank_acc"]', 'PHP', '$_POST["Address"]', '$_POST["contact"]', '$_POST["emailadd"]', '$_POST["Gender"]', '$_POST["Pin"]' );";
+        $SQL2 = "INSERT INTO accounts (LID, Surname, Fname, Mi) VALUES ((select LID from Login_tbl where us= '$_POST["user"]'),'$_POST["surname"]', '$_POST["firstname"]', '$_POST["midname"]')";
+        $SQL1 = "INSERT INTO Login_tbl (Un, Pw) VALUES ('$_POST["user"]', '$_POST["pass"]);";
+        $result = mysqli_query($connect,$SQL1);
+        $result = mysqli_query($connect,$SQL2);
+        $result = mysqli_query($connect,$SQL3);
+
+
+
     }
-    $result = mysqli_query($connect,$SQL);
 ?>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -44,15 +50,9 @@
 	</style>
 	<body>
 
-	<input	class ="form-control"
-					style ="width:200px;"
-					name="surname" 	
-					type = "text"
-					id = "surname"
-					value = "" />
 	<center>
 		
-		<form action = "db/db.php" method = "post">
+		<form  method = "post">
 			<div class = "jumbotron container">
 			<h1 style="background-color:#000067; color:white;"><center> Registration Form </center></h1>
 			<fieldset>
@@ -162,25 +162,18 @@
 			<br/>
 			</div>
 			<label> Password: </label>
-			<div class= "input-group">
-			<input 	class ="form-control"
+			<div class= "input-group">	
+				<input 	class ="form-control"
 					style ="width:200px;"
 					name="pass" 
-					type = "text"
-					id = "pass"
-					value = "" />
-					
-					
+					type = "password"
+					id = "pass"/>	
 			</div>
 			</fieldset>	
 			</br>
 			</br>
 			
-            <input 	class ="form-control"
-					style ="width:200px;"
-					name="pass" 
-					type = "password"
-					id = "pass"/>
+            
 			<input name ="submit" type="button" class="btn btn-primary" style = "width:210px;" value = "SUBMIT">
 		
 		</div>
