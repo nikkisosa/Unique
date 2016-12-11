@@ -31,8 +31,8 @@ else if($bill <= $calculate)
 	}
 	else
 	{
-		$date = date('m-d-Y');
-		$query = mysqli_query($connect,"insert into history(BID,AmountPay,TotalAmount,Date)values((SELECT max(bank.bid) FROM login_tbl INNER JOIN accounts ON accounts.LID = login_tbl.LID INNER JOIN bank ON bank.AID = accounts.AID INNER JOIN otherinfo ON otherinfo.AID = accounts.AID where login_tbl.Un = '$name'),'$bill','$calculate','$date');");
+		$date = date('m-d-Y h:i:sa');
+		$query = mysqli_query($connect,"insert into history(BID,AmountPay,TotalAmount,Date)values((SELECT max(bank.bid) FROM login_tbl INNER JOIN accounts ON accounts.LID = login_tbl.LID INNER JOIN bank ON bank.AID = accounts.AID INNER JOIN otherinfo ON otherinfo.AID = accounts.AID where login_tbl.Un = '$name'),'$bill','$calculate','$date'.);");
 
 
 		$updateQUery = mysqli_query($connect,"UPDATE accounts INNER JOIN bank ON bank.AID = accounts.AID INNER JOIN login_tbl ON accounts.LID = login_tbl.LID set bank.Current_bal = '0', bank.Previous_bal = '$equal' where login_tbl.un = '$name';");

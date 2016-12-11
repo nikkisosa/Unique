@@ -54,7 +54,7 @@ if(isset($_SESSION['Username']))
         <li><a href="#Accounts" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>&nbsp Accounts <span class="caret"></span></a>
         
           <ul class="dropdown-menu">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php 
+            <li><a href="accounts.php"><span class="glyphicon glyphicon-user"></span> <?php 
             $name = $_SESSION['Username'];
             $query = mysqli_query($connect,"select Concat(Surname,',',Fname,' ',Mi) from accounts INNER join LOGIN_TBL ON LOGIN_TBL.LID = Accounts.LID where un = '$name'");
             if($row = mysqli_fetch_array($query))

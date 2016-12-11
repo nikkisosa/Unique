@@ -34,7 +34,7 @@ if(isset($_SESSION['Username']))
     <h3 class="page-header">Account Summary for Account number : 
 		<?php 
     $name = $_SESSION['Username'];
-			$query = mysqli_query($connect,"SELECT login_tbl.Un, Concat(Surname,',',Fname,' ',Mi), otherinfo.Acc_no FROM accounts INNER JOIN otherinfo ON otherinfo.AID = accounts.AID INNER JOIN login_tbl ON accounts.LID = login_tbl.LID WHERE login_tbl.Un = '$';");
+			$query = mysqli_query($connect,"SELECT login_tbl.Un, Concat(Surname,',',Fname,' ',Mi), otherinfo.Acc_no FROM accounts INNER JOIN otherinfo ON otherinfo.AID = accounts.AID INNER JOIN login_tbl ON accounts.LID = login_tbl.LID WHERE login_tbl.Un = '$name';");
 			while ($rows = mysqli_fetch_array($query)) {
 				if(isset($rows[1]) ==  isset($rows[1]))
 				{
@@ -86,8 +86,8 @@ $connect->close();
 <script src="js/jquery.js"></script>
     <script>
     $(document).ready(function() {
-    
       $("#btn").click(function(){
+        
            var bill =  $('#bill').val();
            //var calculate =  $('$calculate').val();
           $.ajax({

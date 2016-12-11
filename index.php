@@ -58,7 +58,7 @@ body  {
     border-width:2.5px;
     border-right-color: rgb(45,45,45);
     opacity: 0.8;
-     box-shadow: 10px 10px 5px rgb(45,45,45);'>
+     box-shadow: 10px 10px 5px rgb(45,45,45);>
 
 <div style=' margin-top:6%;
     background-color: rgb(34,49,34);
@@ -69,12 +69,12 @@ body  {
     border-style: outset;
     border-bottom-color: rgb(45,45,45);
     border-width:2.5px;
-    border-right-color: rgb(45,45,45);'>
+    border-right-color: rgb(45,45,45);>
 
 <div  style='
 border: 1px solid rgb(34,34,34);
-border-bottom-color: rgb(100,100,100);
-background-color:  rgb(34,34,34); '>
+border-bottom-color: rgb(100,100,100);;
+background-color:  rgb(34,34,34);; '>
 <p style=' margin-top:5px; color:white; font-size:18px;'>Login</p> 
 </div>  
 <input       style='border: 0.5px solid grey; 
